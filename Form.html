@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="FormStyle.css">
     <title>Application Form</title>
     <link rel="icon" type="image/svg" href="photos\logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -20,6 +23,47 @@
                 <li><a class="active" href="Form.html">Contact us</a></li>
             </ul>
         </nav>
+
+        <header>
+            <h1>Contact us</h1>
+            <p>Need an experienced and skilled hand with custom IT projects?<br>Fill out the form to get a free consultation.</p>
+        </header>
+
+        <div class="twoSidses">
+            <div class="contactForm">
+                <input class="card" type="text" placeholder="Your Company Name">
+                <input class="card" type="text" placeholder="Nature of Business">
+
+                <div class="twoCols card">
+                        <input class="twoCols1" type="text" placeholder="Address">
+                        <input class="twoCols2" type="text" placeholder="Postcode">
+                </div>
+
+                <input class="card" type="text" placeholder="Contact name">
+                <input class="card" type="tel" placeholder="Contact Phone">
+
+                <input type="email" class="card" placeholder="email@gmail">
+                <p class="error-text">Please, enter valid email address</p>
+
+                <input class="card" type="text" placeholder="Linkedin">
+                <input class="card input-idea" type="text" placeholder="Let’s talk about your idea">
+
+                <div class="file-upload">
+                    <img src="photos/upload.svg" alt="upload">
+                    <p class="uploadP">Upload Additional file</p>
+                </div>
+                <p class="upload-note">Attach file. File size of your documents should not exceed10MB</p>
+
+
+                <button type="submit" class="btn-submit">SUBMIT</button>
+            
+                <div class="nda-box">
+                    <input type="checkbox" class="nda-checkbox">
+                    <label>I want to protect my data by signing an NDA</label>
+                </div>
+
+            </div>
+        </div>
     </div>
 </body>
 </html>
