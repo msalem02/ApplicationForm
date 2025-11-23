@@ -359,3 +359,148 @@ header p{
     align-items: center;
     justify-content: center;
 }
+
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 64px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;              
+    width: 70%;
+    max-width: 260px;
+    height: 100vh;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.08);
+    margin: 0;
+    padding: 80px 24px 24px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navMenu li {
+    width: 100%;
+  }
+
+  .navMenu a {
+    font-size: 16px;
+  }
+
+  header h1,
+  header p {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+  }
+
+  header h1 {
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  header p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .twoSidses {
+    flex-direction: column;
+  }
+
+  .contactForm {
+    width: 100%;
+    height: auto;
+    margin: 32px 0 40px;
+    padding: 0 16px;
+  }
+
+  .card,
+  .file-upload,
+  .btn-submit {
+    width: 100%;
+  }
+
+  .contactForm input {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .twoCols {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .twoCols1,
+  .twoCols2 {
+    width: 100%;
+  }
+
+  .error-text,
+  .upload-note {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .file-upload {
+    margin-top: 24px;
+    padding: 24px 16px;
+  }
+
+  .btn-submit {
+    margin-top: 24px;
+  }
+
+  .nda-box {
+    width: 100%;
+    margin-top: 16px;
+    padding-left: 0;
+  }
+
+  .locations,
+  .quires,
+  .subsicribe {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+  }
+
+  .locations {
+    margin-top: 24px;
+  }
+
+  .quires,
+  .subsicribe {
+    margin-top: 32px;
+  }
+
+  .newsletter-row {
+    width: 100%;
+    padding-top: 16px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 1;
+  }
+
+
+}
+
+
+
+
+
