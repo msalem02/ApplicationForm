@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="form.js"></script>
 </head>
 <body>
     <div class="container">
@@ -28,79 +29,117 @@
             <h1>Contact us</h1>
             <p>Need an experienced and skilled hand with custom IT projects?<br>Fill out the form to get a free consultation.</p>
         </header>
+            <div class="twoSidses">
+                <form class="contactForm" id="contact-form" onsubmit="return validateForm()">
+                    <input class="card" type="text" id="company-name" placeholder="Your Company Name" onkeyup="validateCompany()">
+                    <p id="company-error" class="error-text"></p>
 
-        <div class="twoSidses">
-            <div class="contactForm">
-                <input class="card" type="text" placeholder="Your Company Name">
-                <input class="card" type="text" placeholder="Nature of Business">
+                    <input class="card" type="text" id="business-nature" placeholder="Nature of Business" onkeyup="validateBusiness()">
+                    <p id="business-error" class="error-text"></p>
 
-                <div class="twoCols card">
-                        <input class="twoCols1" type="text" placeholder="Address">
-                        <input class="twoCols2" type="text" placeholder="Postcode">
-                </div>
-
-                <input class="card" type="text" placeholder="Contact name">
-                <input class="card" type="tel" placeholder="Contact Phone">
-
-                <input type="email" class="card" placeholder="email@gmail">
-                <p class="error-text">Please, enter valid email address</p>
-
-                <input class="card" type="text" placeholder="Linkedin">
-                <input class="card input-idea" type="text" placeholder="Let’s talk about your idea">
-
-                <div class="file-upload">
-                    <img src="photos/upload.svg" alt="upload">
-                    <p class="uploadP">Upload Additional file</p>
-                </div>
-                <p class="upload-note">Attach file. File size of your documents should not exceed10MB</p>
-
-
-                <button type="submit" class="btn-submit">SUBMIT</button>
-            
-                <div class="nda-box">
-                    <input type="checkbox" class="nda-checkbox">
-                    <label>I want to protect my data by signing an NDA</label>
-                </div>
-
-            </div>
-
-            <div class="right-side">
-                <div class="locations">
-                    <h2>offices</h2>
-                    <div class="location">
-                        <p>United States<br>500 5th Avenue Suite 400, NY 10110</p>
+                    <div class="twoCols card">
+                        <input class="twoCols1" type="text" id="address" placeholder="Address" onkeyup="validateAddress()">
+                        <input class="twoCols2" type="text" id="postcode" placeholder="Postcode" onkeyup="validatePostcode()">
                     </div>
-                    <div class="location">
-                        <p>United Kingdom<br>High St, Bromley BR1 1DN</p>
-                    </div>
-                    <div class="location">
-                        <p>France<br>80 avenue des Terroirs de France, Paris</p>
-                    </div>
-                </div>
 
-                <div class="quires">
-                    <h2>For Quick Inquiries</h2>
-                    <div class="phones">
-                        <div class="phone">
+                    <p id="address-error" class="error-text"></p>
+                    <p id="postcode-error" class="error-text"></p>
+
+                    <input class="card" type="text" id="contact-name" placeholder="Contact name" onkeyup="validateContactName()">
+                    <p id="name-error" class="error-text"></p>
+
+                    <input class="card" type="tel" id="contact-phone" placeholder="Contact Phone" onkeyup="validatePhone()">
+                    <p id="phone-error" class="error-text"></p>
+
+                    <input type="email" class="card" id="contact-email" placeholder="email@gmail" onkeyup="validateEmail()">
+                    <p id="email-error" class="error-text"></p>
+
+                    <input class="card" type="text" id="linkedin" placeholder="Linkedin">
+                    <p id="linkedin-error" class="error-text"></p>
+
+                    <input class="card input-idea" type="text" id="idea" placeholder="Let’s talk about your idea" onkeyup="validateIdea()">
+                    <p id="idea-error" class="error-text"></p>
+
+                    <div class="file-upload">
+                        <img src="photos/upload.svg" alt="upload">
+                        <p class="uploadP">Upload Additional file</p>
+                    </div>
+                    <p class="upload-note">Attach file. File size of your documents should not exceed10MB</p>
+
+                    <button type="button" id="read-terms-btn" onclick="openTerms()" class="btn-terms">Read our terms</button>
+                    <button type="submit" class="btn-submit">SUBMIT</button>
+                    <p id="submit-error" class="error-text"></p>
+
+                    <div class="nda-box">
+                        <input type="checkbox" class="nda-checkbox" id="nda">
+                        <label for="nda">I want to protect my data by signing an NDA</label>
+                    </div>
+
+                </form>
+
+                <div class="right-side">
+                    <div class="locations">
+                        <h2>offices</h2>
+                        <div class="location">
+                            <p>United States<br>500 5th Avenue Suite 400, NY 10110</p>
+                        </div>
+                        <div class="location">
+                            <p>United Kingdom<br>High St, Bromley BR1 1DN</p>
+                        </div>
+                        <div class="location">
+                            <p>France<br>80 avenue des Terroirs de France, Paris</p>
+                        </div>
+                    </div>
+
+                    <div class="quires">
+                        <h2>For Quick Inquiries</h2>
+                        <div class="phones">
+                            <div class="phone">
                             <img src="photos/flag-uk 1.svg" alt="uk flag">
                             <p>+44 7777777777</p>
-                        </div>
-                        <div class="phone">
+                            </div>
+                            <div class="phone">
                             <img src="photos/flag-us 1.svg" alt="us flag">
                             <p>+1 3333333330</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="subsicribe">
-                    <h2>Would you like to join our newsletter?</h2>
-                    <div class="newsletter-row">
-                        <input type="email" placeholder="Email" class="newsletter-input">
-                        <button class="newsletter-btn">✓</button>
+                    <div class="subsicribe">
+                        <h2>Would you like to join our newsletter?</h2>
+                        <div class="newsletter-row">
+                            <input type="email" placeholder="Email" class="newsletter-input" id="newsletter-email">
+                            <button class="newsletter-btn" onclick="validateNewsletter()">✓</button>
+                        </div>
+                        <p id="newsletter-error" class="error-text"></p>
                     </div>
                 </div>
             </div>
+    </div>
+    
+    <div id="terms-modal" class="modal">
+    <div class="modal-content">
+        <h2>Terms & Conditions</h2>
+        <div class="modal-body">
+            <p>
+                This is dummy terms text. You can scroll this area to read more. <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quia numquam expedita molestiae earum, obcaecati sapiente unde ex, nulla fugit, maxime sequi animi autem ad qui placeat. Culpa similique pariatur repudiandae dolor accusantium fuga earum officiis eos quos illo amet voluptatibus quae itaque quam ducimus provident eius laboriosam blanditiis, nesciunt doloribus. Ea natus cumque vitae modi molestias officiis deserunt repellat perferendis ut velit, totam harum quae hic dolorem eos maxime accusantium. Id quaerat necessitatibus aliquam vero sed accusamus optio ab voluptatum quisquam voluptatem magni in distinctio molestias, libero vitae tenetur facere repellat voluptate, temporibus delectus a? Laborum asperiores nesciunt consequuntur neque inventore quisquam sapiente est fuga qui, officiis vero hic placeat eius! Atque officia qui soluta, facilis quam tempore aspernatur ex neque incidunt optio sed et repellendus est, fugiat nemo sapiente vero eaque delectus porro voluptates similique possimus ratione odit. Suscipit numquam consectetur dolores error maxime commodi repudiandae. Impedit nihil voluptas quidem, eveniet dolore voluptatem sit assumenda, quae modi nemo enim consectetur ullam quas veritatis! Tenetur similique consequatur, dolores amet repellendus omnis dolorum nulla unde corporis, deserunt quo temporibus commodi eos ad! Facere nisi repellendus obcaecati, exercitationem unde blanditiis laboriosam iure beatae pariatur error laborum, itaque odit tempore officia ab placeat nulla dolores ipsum eum sit provident veritatis facilis? Excepturi reiciendis impedit libero adipisci eaque, dolorem ducimus quibusdam velit vitae cupiditate ex esse assumenda blanditiis possimus cum? Asperiores at beatae sit, hic ducimus odit veritatis fugiat maiores atque praesentium esse ab perspiciatis sed labore omnis quae mollitia minima officia assumenda eius natus, dignissimos molestiae soluta optio. Veritatis cumque voluptas, magni pariatur, dolorem, error omnis nam molestiae voluptatem sint laborum! Velit animi nostrum labore, voluptates aperiam corporis eaque placeat nam molestias id maxime tempore aut vitae ex quod odio perspiciatis? Perferendis asperiores quo officia, itaque minus error eligendi incidunt ducimus quis similique doloribus aut suscipit sed omnis, vel distinctio perspiciatis, harum corporis nisi optio soluta illo excepturi. Consequuntur perferendis nisi aspernatur deserunt delectus maiores dolorem saepe quasi illum, itaque voluptas ipsa! Iure eligendi dolorem harum officiis esse autem amet ducimus alias repudiandae voluptate debitis, quidem consequuntur ipsam ex. Aut voluptas vitae provident. Recusandae adipisci perferendis nemo. Minus maxime dolor vero itaque autem numquam fugiat accusamus? Laborum laudantium veritatis, rem dignissimos repellat natus qui amet expedita tenetur suscipit minima, eveniet placeat illo quisquam voluptatum vel molestias est! Sit totam suscipit doloribus natus! Repellat architecto distinctio, suscipit labore numquam a laborum quo debitis pariatur assumenda veniam fugit modi odit facere blanditiis eius inventore excepturi ab eum est. Saepe autem qui pariatur repellat. Veritatis veniam cum atque. Voluptatibus atque tempora tenetur hic beatae quam deserunt, facere consequuntur, iusto cumque pariatur quos, perferendis suscipit distinctio saepe odit unde dolore temporibus possimus cum culpa iste amet tempore. Dolorum et dolor, qui quos excepturi dolorem minima reprehenderit iure laborum officia odit tempora atque perferendis? Minima vitae minus repudiandae sint recusandae voluptatum? Consequatur ex, tempora voluptatem asperiores obcaecati cumque error aliquid aspernatur harum necessitatibus soluta ipsa, praesentium autem! Aspernatur nesciunt hic eligendi, nihil quas aperiam accusantium odit non.
+            </p>
+        </div>
+
+        <div class="modal-footer">
+            <label>
+                <input type="checkbox" id="terms-checkbox" onchange="toggleTermsAccepted()">
+                I have read and accept the terms.
+            </label>
+
+            <button type="button" onclick="closeTerms()" class="btn-close-modal">Close</button>
         </div>
     </div>
+    </div>
+    
+    <div id="toast" class="toast">Form submitted successfully!</div>
+    <div id="toast-news" class="toast">Subscribed successfully!</div>
+
 </body>
 </html>
