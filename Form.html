@@ -51,7 +51,7 @@
                     <input class="card" type="tel" id="contact-phone" placeholder="Contact Phone" onkeyup="validatePhone()">
                     <p id="phone-error" class="error-text"></p>
 
-                    <input type="email" class="card" id="contact-email" placeholder="email@gmail" onkeyup="validateEmail()">
+                    <input type="email" class="card" id="contact-email" placeholder="email@example.com" onkeyup="validateEmail()">
                     <p id="email-error" class="error-text"></p>
 
                     <input class="card" type="text" id="linkedin" placeholder="Linkedin">
@@ -60,11 +60,13 @@
                     <input class="card input-idea" type="text" id="idea" placeholder="Let’s talk about your idea" onkeyup="validateIdea()">
                     <p id="idea-error" class="error-text"></p>
 
-                    <div class="file-upload">
+                    <label class="file-upload">
                         <img src="photos/upload.svg" alt="upload">
                         <p class="uploadP">Upload Additional file</p>
-                    </div>
-                    <p class="upload-note">Attach file. File size of your documents should not exceed10MB</p>
+                        <input type="file" id="attachment" name="attachment" hidden>
+                    </label>
+
+                    <p class="upload-note">Attach file. File size of your documents should not exceed 10MB</p>
 
                     <button type="button" id="read-terms-btn" onclick="openTerms()" class="btn-terms">Read our terms</button>
                     <button type="submit" class="btn-submit">SUBMIT</button>
