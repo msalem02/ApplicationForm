@@ -13,17 +13,19 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
+       <nav class="navbar">
+            <button class="hamburger" type="button" aria-label="Open menu" onclick="toggleMenu()">☰</button>
             <img class="logo" src="photos/logo.svg" alt="logo">
-            <ul class="navMenu">
-                <li><a href="company.html">Company</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="FinTech.html">FinTech Solutions</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a class="active" href="Form.html">Contact us</a></li>
+            <ul class="navMenu" id="navMenu">
+                <li><a href="company.html" onclick="closeMenu()">Company</a></li>
+                <li><a href="services.html" onclick="closeMenu()">Services</a></li>
+                <li><a href="FinTech.html" onclick="closeMenu()">FinTech Solutions</a></li>
+                <li><a href="products.html" onclick="closeMenu()">Products</a></li>
+                <li><a href="portfolio.html" onclick="closeMenu()">Portfolio</a></li>
+                <li><a class="active" href="Form.html" onclick="closeMenu()">Contact us</a></li>
             </ul>
         </nav>
+
 
         <header>
             <h1>Contact us</h1>
@@ -38,12 +40,17 @@
                     <p id="business-error" class="error-text"></p>
 
                     <div class="twoCols card">
+                    <div class="col">
                         <input class="twoCols1" type="text" id="address" placeholder="Address" onkeyup="validateAddress()">
-                        <input class="twoCols2" type="text" id="postcode" placeholder="Postcode" onkeyup="validatePostcode()">
+                        <p id="address-error" class="error-text"></p>
                     </div>
 
-                    <p id="address-error" class="error-text"></p>
-                    <p id="postcode-error" class="error-text"></p>
+                    <div class="col">
+                        <input class="twoCols2" type="text" id="postcode" placeholder="Postcode" onkeyup="validatePostcode()">
+                        <p id="postcode-error" class="error-text"></p>
+                    </div>
+                    </div>
+
 
                     <input class="card" type="text" id="contact-name" placeholder="Contact name" onkeyup="validateContactName()">
                     <p id="name-error" class="error-text"></p>
@@ -109,11 +116,12 @@
 
                     <div class="subsicribe">
                         <h2>Would you like to join our newsletter?</h2>
-                        <div class="newsletter-row">
+                       <form class="newsletter-row" id="newsletter-form" onsubmit="return validateNewsletter()">
                             <input type="email" placeholder="Email" class="newsletter-input" id="newsletter-email">
-                            <button class="newsletter-btn" onclick="validateNewsletter()">✓</button>
-                        </div>
+                            <button type="submit" class="newsletter-btn">✓</button>
+                        </form>
                         <p id="newsletter-error" class="error-text"></p>
+
                     </div>
                 </div>
             </div>

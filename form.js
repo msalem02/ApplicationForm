@@ -150,7 +150,7 @@ function validateNewsletter() {
   showNewsletterToast(); 
   field.value = ""; 
 
-  return true;
+  return false;
 }
 
 function showToast() {
@@ -212,4 +212,17 @@ function validateForm() {
   clearForm();
 
   return false; 
+}
+
+
+function toggleMenu() {
+  var menu = document.getElementById("navMenu");
+  if (!menu) return;
+  menu.classList.toggle("open");
+}
+
+function closeMenu() {
+  var menu = document.getElementById("navMenu");
+  if (!menu) return;
+  menu.classList.remove("open");
 }
